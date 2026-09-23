@@ -1,0 +1,22 @@
+<div class="container mx-auto">
+<table class="table">
+  <thead>
+    <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Descripcion</th>
+        <th scope="col">Precio</th>
+        <th scope="col">Stock></th>
+    </tr>
+  </thead>
+  <tbody>
+    @for(producto of productos; track producto.id){
+    <tr>
+        <td>{{producto.nombre}}</td>
+        <td>{{producto.descripcion}}</td>
+        <td>{{producto.precio}}</td>
+        <td>{{producto.stock}}</td>
+    </tr>
+    }
+  </tbody>
+</table>
+</div>
