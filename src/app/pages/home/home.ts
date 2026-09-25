@@ -1,6 +1,7 @@
 import { ChangeDetectorRef, Component, inject } from '@angular/core';
 import { Product } from '../../Models/Product';
 import { ProductServices } from '../../Services/product-services';
+import { Router } from '@angular/router';
 
 @Component({
   imports: [],
@@ -11,10 +12,15 @@ import { ProductServices } from '../../Services/product-services';
 export class Home {
   private productServices = inject(ProductServices)
   private refresh = inject(ChangeDetectorRef)
+  private navigator = inject(Router)
   public productos : Product[] = []
 
  ngOnInit():void{
   this.CallProducts();
+ }
+
+ GoToCreateProduct(){
+  this.navigator.navigate(['create-products'])
  }
 
   CallProducts(){

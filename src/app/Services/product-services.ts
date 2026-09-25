@@ -11,4 +11,8 @@ export class ProductServices {
     GetProducts(){
         return this.httpClient.get<Product[]>(this.urlBase + 'GetProductos')
     }
+
+    CreateProduct(item : Product){
+        return this.httpClient.post(this.urlBase + 'CreateProducto', item, { responseType: 'text'})
+    }
 }
