@@ -2,6 +2,7 @@ import { ChangeDetectorRef, Component, inject } from '@angular/core';
 import { Product } from '../../Models/Product';
 import { ProductServices } from '../../Services/product-services';
 import { Router } from '@angular/router';
+import { response } from 'express';
 
 @Component({
   imports: [],
@@ -21,6 +22,20 @@ export class Home {
 
  GoToCreateProduct(){
   this.navigator.navigate(['create-products'])
+ }
+
+ GoToUpdateProduct(id : number){
+  this.navigator.navigate(['create-products/' + id])
+ }
+
+ DeleteProduct(id: number){
+  this.productServices.DeleteProduct(id).subscribe({
+    next:(response)=>{
+    this.CallProducts();
+    },error(err){
+      console.error('Error: ', err)
+    },
+  })
  }
 
   CallProducts(){

@@ -1,24 +1,24 @@
-<div class="container m-5 mx-auto">
-    <form (ngSubmit)="CreateProduct()">
+<div class="container mx-auto m-5 p-5">
+    <form (ngSubmit)="CallAction()">
         <h2>Formulario producto</h2>
             <div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Nombre</label>
-  <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Televisor LG" name="nombre" [(ngModel)]="newProduct.nombre">
+                <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Televisor LG" name="nombre" [(ngModel)]="newProduct.nombre">
             </div>
             <div class="mb-3">
-  <label for="exampleFormControlInput2" class="form-label">Descrpcion</label>
-  <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="Sesenta pulgadas" name="descripcion" [(ngModel)]="newProduct.descripcion">
+                <label for="exampleFormControlInput2" class="form-label">Descrpcion</label>
+                <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="Sesenta pulgadas" name="descripcion" [(ngModel)]="newProduct.descripcion">
             </div>
             <div class="mb-3">
-  <label for="exampleFormControlInput3" class="form-label">Precio</label>
-  <input type="email" class="form-control" id="exampleFormControlInput3" placeholder="60000000" name="precio" [(ngModel)]="newProduct.precio">
+                <label for="exampleFormControlInput3" class="form-label">Precio</label>
+                <input type="email" class="form-control" id="exampleFormControlInput3" placeholder="60000000" name="precio" [(ngModel)]="newProduct.precio">
             </div>
             <div class="mb-3">
-  <label for="exampleFormControlInput4" class="form-label">Stock</label>
-  <input type="email" class="form-control" id="exampleFormControlInput4" placeholder="5" name="stock" [(ngModel)]="newProduct.stock">
+                <label for="exampleFormControlInput4" class="form-label">Stock</label>
+                <input type="email" class="form-control" id="exampleFormControlInput4" placeholder="5" name="stock" [(ngModel)]="newProduct.stock">
             </div>
             <div class="mb-3">
-                <button type="submit" class="btn btn-primary">Crear</button>
+                <button type="submit" class="btn btn-primary">{{isEdit ? 'Editar' : 'Crear'}}</button>
             </div>
     </form>
 </div>

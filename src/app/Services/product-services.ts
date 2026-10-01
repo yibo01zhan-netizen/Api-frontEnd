@@ -15,4 +15,16 @@ export class ProductServices {
     CreateProduct(item : Product){
         return this.httpClient.post(this.urlBase + 'CreateProducto', item, { responseType: 'text'})
     }
+
+    DeleteProduct(id : number){
+    return this.httpClient.delete(this.urlBase + 'DeleteProducto/' + id, {responseType: 'text'})
+    }
+
+    UpdateProduct(item : Product){
+        return this.httpClient.put(this.urlBase + 'UpdateProducto/' + item.id, item, {responseType: 'text'})
+    }
+
+    GetProduct(id : number){
+        return this.httpClient.get<Product>(this.urlBase + 'GetProducto/' + id)
+    }
 }
