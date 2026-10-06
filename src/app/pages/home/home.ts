@@ -2,10 +2,11 @@ import { ChangeDetectorRef, Component, inject } from '@angular/core';
 import { Product } from '../../Models/Product';
 import { ProductServices } from '../../Services/product-services';
 import { Router } from '@angular/router';
-import { response } from 'express';
+import { RouterModule } from '@angular/router';
 
 @Component({
-  imports: [],
+  standalone: true,
+  imports: [RouterModule],
   selector: 'app-home',
   styleUrl: './home.css',
   templateUrl: './home.html',

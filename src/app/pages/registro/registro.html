@@ -1,0 +1,69 @@
+<div class="container-fluid vh-100 d-flex align-items-center justify-content-center bg-light">
+  <div class="row w-100 bg-white shadow-lg rounded-4 overflow-hidden" style="max-width: 900px;">
+    
+    <!-- Columna Izquierda (Logo CompraYa) -->
+    <div class="col-md-6 d-none d-md-flex flex-column align-items-center justify-content-center bg-primary bg-opacity-10 p-5">
+      <div class="d-flex align-items-center gap-2 mb-3">
+        <i class="bi bi-cart3 text-primary" style="font-size: 3rem;"></i>
+        <span class="text-dark" style="font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 2.5rem; letter-spacing: -1px;">
+          Compra<span class="text-primary">Ya</span>
+        </span>
+      </div>
+      <p class="fs-5 text-muted text-center">Tu tienda, en un solo lugar.</p>
+    </div>
+
+    <!-- Columna Derecha (Formulario de Registro) -->
+    <div class="col-md-6 p-4 p-sm-5 d-flex flex-column justify-content-center overflow-auto" style="max-height: 100vh;">
+      <h3 class="mb-2 fw-bold">Crear cuenta</h3>
+      <p class="text-muted mb-4 small">Completa la información para registrarte</p>
+      
+      <form>
+        <!-- 1. Nombre -->
+        <div class="mb-3">
+          <label class="form-label text-dark fw-medium small">Nombre completo</label>
+          <div class="input-group">
+            <span class="input-group-text bg-light border-end-0"><i class="bi bi-person"></i></span>
+            <input type="text" class="form-control bg-light border-start-0" placeholder="Tu nombre completo">
+          </div>
+        </div>
+
+        <!-- 2. Correo electrónico -->
+        <div class="mb-3">
+          <label class="form-label text-dark fw-medium small">Correo electrónico</label>
+          <div class="input-group">
+            <span class="input-group-text bg-light border-end-0"><i class="bi bi-envelope"></i></span>
+            <input type="email" class="form-control bg-light border-start-0" placeholder="tu@email.com">
+          </div>
+        </div>
+        
+        <!-- 3. Contraseña -->
+        <div class="mb-3">
+          <label class="form-label text-dark fw-medium small">Contraseña</label>
+          <div class="input-group">
+            <span class="input-group-text bg-light border-end-0"><i class="bi bi-lock"></i></span>
+            <input type="password" class="form-control bg-light border-start-0" placeholder="Crea tu contraseña">
+          </div>
+        </div>
+
+        <!-- 4. Confirmación de contraseña -->
+        <div class="mb-4">
+          <label class="form-label text-dark fw-medium small">Confirmar contraseña</label>
+          <div class="input-group">
+            <span class="input-group-text bg-light border-end-0"><i class="bi bi-lock"></i></span>
+            <input type="password" class="form-control bg-light border-start-0" placeholder="Repite tu contraseña">
+          </div>
+        </div>
+        
+        <!-- 5. Botón Registrarse -->
+        <button type="button" class="btn btn-primary btn-lg w-100 mb-3 rounded-pill fw-bold">Registrarse</button>
+      </form>
+      
+      <!-- Navegación de regreso al Login -->
+      <div class="text-center">
+        <span class="text-muted small">¿Ya tienes una cuenta? </span>
+        <a routerLink="/login" class="text-primary text-decoration-none fw-bold small">Inicia sesión</a>
+      </div>
+    </div>
+
+  </div>
+</div>
